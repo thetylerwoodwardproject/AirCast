@@ -31,7 +31,8 @@ and land it dense, warm, and broadcast-ready at a consistent, peak-safe loudness
   peaks a non-oversampled limiter would miss.
 - **Live per-stage metering** — every knob's ring shows real-time gain reduction / activity at
   that exact stage, layered under the value arc showing where the knob is set.
-- Stereo-only, sample-rate agnostic, VST3 / AU / Standalone from one codebase.
+- Sample-rate agnostic, VST3 / AU / Standalone from one codebase. Stereo-only for now — mono
+  support is planned, see [Roadmap](#roadmap).
 
 ## Documentation
 
@@ -88,6 +89,13 @@ AirCast/
 ├── packaging/                  # Per-platform installer/packaging scripts (see PACKAGING.md)
 └── docs/                       # README assets
 ```
+
+## Roadmap
+
+- **Mono support.** AirCast currently only loads on a stereo bus — mono input/output isn't
+  supported yet. It's planned, but needs more work first: the mono-bass crossover and the
+  true-peak oversampler are both currently written assuming two channels
+  (`isBusesLayoutSupported` in `Source/PluginProcessor.cpp`). No ETA yet.
 
 ## Status / license
 

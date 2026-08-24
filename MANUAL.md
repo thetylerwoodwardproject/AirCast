@@ -180,7 +180,8 @@ every repaint tick; it's fixed as of this manual's writing.
 
 ## 9. Technical notes
 
-- Stereo-only (mono/surround buses are not supported and won't load).
+- Stereo-only for now (mono/surround buses are not supported and won't load) — mono support
+  is planned, see §10.
 - Sample-rate agnostic — all filter cutoffs are recalculated against the current sample rate.
 - True-peak limiting runs on a 2× oversampled signal specifically to catch inter-sample
   peaks that a plain limiter would let through.
@@ -188,3 +189,10 @@ every repaint tick; it's fixed as of this manual's writing.
   running windowed average) for creative/monitoring use — it is not a certified loudness
   meter for delivery compliance. Verify final loudness with a calibrated meter before
   delivering to a platform with strict loudness specs.
+
+## 10. Upcoming features
+
+- **Mono support.** AirCast is stereo-only today — a mono input/output bus won't load. Mono
+  support is planned but needs more work before it ships, mainly because the mono-bass
+  crossover and the true-peak oversampler are both currently written assuming two channels
+  (see `isBusesLayoutSupported` in the source). No ETA yet.
