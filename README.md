@@ -96,3 +96,9 @@ Early-stage (`v0.1.0`), single-maintainer project. AirCast's own source is
 vendored in this repo) has its own separate licensing terms — see
 [juce.com/get-juce](https://juce.com/get-juce/) — which apply independently to anyone
 building or distributing a compiled copy of this plugin.
+
+---
+
+Built collaboratively with [Claude Code](https://claude.com/claude-code) — the DSP chain,
+bug fixes, UI fixes, and all of the documentation in this repo (including this README) were
+developed through that collaboration, directed and reviewed by the maintainer.
