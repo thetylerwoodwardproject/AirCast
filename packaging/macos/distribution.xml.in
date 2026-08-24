@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>AirCast @VERSION@</title>
+    <organization>com.fullymodulated</organization>
+    @LICENSE_LINE@
+    <options customize="allow" require-scripts="false" rootVolumeOnly="false"/>
+    <domains enable_anywhere="false" enable_currentUserHome="true" enable_localSystem="true"/>
+    <volume-check>
+        <allowed-os-versions>
+            <os-version min="11.0"/>
+        </allowed-os-versions>
+    </volume-check>
+    <choices-outline>
+        <line choice="vst3"/>
+        <line choice="au"/>
+    </choices-outline>
+    <choice id="vst3" title="AirCast VST3" description="Installs the VST3 plugin." visible="true" start_selected="true">
+        <pkg-ref id="com.fullymodulated.aircast.vst3.pkg"/>
+    </choice>
+    <choice id="au" title="AirCast Audio Unit" description="Installs the AU (Audio Unit) plugin." visible="true" start_selected="true">
+        <pkg-ref id="com.fullymodulated.aircast.au.pkg"/>
+    </choice>
+    <pkg-ref id="com.fullymodulated.aircast.vst3.pkg" version="@VERSION@" onConclusion="none">AirCast-vst3.pkg</pkg-ref>
+    <pkg-ref id="com.fullymodulated.aircast.au.pkg" version="@VERSION@" onConclusion="none">AirCast-au.pkg</pkg-ref>
+</installer-gui-script>
