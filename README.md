@@ -91,7 +91,8 @@ AirCast/
 
 ## Status / license
 
-Early-stage (`v0.1.0`), single-maintainer project. **No license file has been added yet** —
-until one is, standard copyright applies (no permission is granted to reuse, modify, or
-redistribute this code). If you're seeing this and want to use AirCast under an open-source
-license, ask — a `LICENSE` file is on the list to add.
+Early-stage (`v0.1.0`), single-maintainer project. AirCast's own source is
+[MIT licensed](LICENSE). Note that JUCE itself (fetched automatically at build time, not
+vendored in this repo) has its own separate licensing terms — see
+[juce.com/get-juce](https://juce.com/get-juce/) — which apply independently to anyone
+building or distributing a compiled copy of this plugin.
